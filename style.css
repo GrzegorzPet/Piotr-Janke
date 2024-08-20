@@ -96,3 +96,35 @@ body{
     height: 30px;
     padding-top: 5px;
 }
+
+/*-----CONTENT----*/
+
+.motto{
+    margin-top: 50px;
+    width: 55vw;
+    padding: 50px 100px;
+    text-transform: uppercase;
+    background: var(--main-orange);
+    color: white;
+    text-align: center;
+}
+
+.motto p{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.divider{
+    display: inline-block;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #ffffff;
+    width: 22%;
+    height: 7px;
+}
+
+.fa-screwdriver-wrench{
+    display: inline-block;
+    padding: 15px;
+}
