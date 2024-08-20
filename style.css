@@ -7,15 +7,19 @@
     --main-orange: rgb(241, 106, 36);
 }
 
-body{
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
+h2{
+    font-size: 1.75rem;
 }
 
-h1{
-    width: 100px;
+ul{
+    padding: 0;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
 }
 
 .center{
@@ -54,7 +58,7 @@ h1{
 
 .logo-container span
 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
     margin: 0;
     color: white;
@@ -68,7 +72,7 @@ h1{
     list-style: none;
     display: flex;
     align-items: flex-end;
-    gap: 50px;
+    gap: 50px
 }
 
 .main-navigation-list-option a{
