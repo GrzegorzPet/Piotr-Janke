@@ -239,4 +239,54 @@ header{
     color: var(--facebook-blue);
 }
 
+@media (orientation: portrait) {
+    
+    :root{
+        --content-width: 90vw;
+    }
 
+    h2{
+        font-size: 1.25rem;
+    }
+
+    /*-----HEADER----*/
+    .first-bar{
+        height: 300px;
+    }
+
+    .logo-container{
+        width: 30vw;
+    }
+
+    .logo-container span
+    {
+        font-size: 3rem;
+    }
+
+    .top-navigation, .title{
+        display: none;
+    }
+
+    .main-navigation-list-option span{
+        font-size: 0.75rem;
+    }
+
+    .second-bar{
+        height: 55px;
+        font-size: 2.1rem;
+    }
+
+    /*-----CONTENT----*/
+
+    .motto-block p{
+        font-size: 0.75rem;
+    }
+
+    .content-box span{
+        font-size: 1.5rem;
+    }
+
+    .content-block p{
+        font-size: 0.75rem;
+    }
+}
