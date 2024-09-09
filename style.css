@@ -5,6 +5,9 @@
 
 :root{
     --main-orange: rgb(241, 106, 36);
+    --content-gray-background: rgb(200, 200, 200);
+    --content-gray-text: rgb(100, 100, 100);
+    --content-width: 55vw;
 }
 
 h2{
@@ -17,9 +20,9 @@ ul{
 
 body{
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 .center{
@@ -28,8 +31,13 @@ body{
     width: fit-content;
 }
 
+header{
+    position: sticky;
+    top: 0;
+    
+}
+
 .first-bar{
-    width: 100vw;
     height: 150px;
     background-color: black;
     color: white;
@@ -95,13 +103,14 @@ body{
     color: white;
     height: 30px;
     padding-top: 5px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
 /*-----CONTENT----*/
 
-.motto{
-    margin-top: 50px;
-    width: 55vw;
+.motto-block{
+    margin-top: 30px;
+    width: var(--content-width);
     padding: 50px 100px;
     text-transform: uppercase;
     background: var(--main-orange);
@@ -109,7 +118,7 @@ body{
     text-align: center;
 }
 
-.motto p{
+.motto-block p{
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 1.15rem;
@@ -129,16 +138,16 @@ body{
     padding: 15px;
 }
 
-/*-----CONTENT-BLOCKS----*/
+/*-----CONTENT-BOXes----*/
 
 .content-categories{
-    width: 55vw;
+    width: var(--content-width);
     display: flex;
     gap: 25px;
     padding-top: 25px;
 }
 
-.content-block{
+.content-box{
     background-color: var(--main-orange);
     flex: 1 1 0px;
     position: relative;
@@ -146,7 +155,7 @@ body{
     overflow: hidden;
 }
 
-.content-block img{
+.content-box img{
     height: 100%;
     width: 100%;
     opacity: 66%;
@@ -156,14 +165,13 @@ body{
     transition: .3s ease-in-out;
 }
 
-.content-block:hover img
-{
+.content-box:hover img{
     transform: scale(1.25);
     filter: grayscale(33%);
     opacity: 100%;
 }
 
-.content-block span{
+.content-box span{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -172,3 +180,20 @@ body{
     color: white;
     text-transform: uppercase;
 }
+
+/*-----CONTENT-BLOCK----*/
+
+.content-block{
+    background-color: var(--content-gray-background);
+    width: var(--content-width);
+    margin-top: 25px;
+    padding: 50px 100px;
+}
+
+.content-block p{
+    font-weight: 500;
+    text-align: justify;
+    color: var(--content-gray-text);
+}
+
+
