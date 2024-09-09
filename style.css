@@ -5,13 +5,20 @@
 
 :root{
     --main-orange: rgb(241, 106, 36);
-    --content-gray-background: rgb(200, 200, 200);
-    --content-gray-text: rgb(100, 100, 100);
+    --facebook-blue: rgb(59, 89, 152); 
+    --content-gray-background: rgb(192, 192, 192);
+    --content-gray-heading: rgb(64, 64, 64);
+    --content-gray-text: rgb(85, 85, 85);
     --content-width: 55vw;
 }
 
 h2{
     font-size: 1.75rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
 }
 
 ul{
@@ -34,7 +41,7 @@ body{
 header{
     position: sticky;
     top: 0;
-    
+    z-index: 1000;
 }
 
 .first-bar{
@@ -56,11 +63,11 @@ header{
 }
 
 .logo-container{
-    width: 190px;
+    width: 9vw;
 }
 
 .logo-container img{
-    width: 170px;
+    width: 100%;
     padding: 10px;
 }
 
@@ -94,8 +101,8 @@ header{
 }
 
 .main-navigation-list-option span{
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.15rem;
+    font-weight: 500;
 }
 
 .second-bar{
@@ -190,10 +197,46 @@ header{
     padding: 50px 100px;
 }
 
+.content-block h2{
+    color: var(--content-gray-heading);
+}
+
 .content-block p{
+    margin-top: 20px;
     font-weight: 500;
     text-align: justify;
     color: var(--content-gray-text);
+}
+
+/*-----FOOTER----*/
+
+.footer{
+    display: flex;
+    margin-top: 50px;
+    padding: 15px 0;
+    background-color: black;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+}
+
+.footer-part{
+    flex: 1 1 0px;
+}
+
+.footer-part h2{
+    font-size: 2rem;
+    color: var(--main-orange);
+}
+
+.footer-part p{
+    display: inline-block;
+    margin-left: 0.25rem;
+    margin-top: 5px;
+}
+
+.facebook-link:hover{
+    color: var(--facebook-blue);
 }
 
 
