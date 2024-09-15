@@ -6,7 +6,7 @@
 :root{
     --main-orange: rgb(241, 106, 36);
     --facebook-blue: rgb(59, 89, 152); 
-    --content-gray-background: rgb(192, 192, 192);
+    --content-gray-background: rgb(240, 240, 240);
     --content-gray-heading: rgb(64, 64, 64);
     --content-gray-text: rgb(85, 85, 85);
     --content-width: 55vw;
@@ -194,7 +194,9 @@ header{
     background-color: var(--content-gray-background);
     width: var(--content-width);
     margin-top: 25px;
-    padding: 50px 100px;
+    padding: 35px 70px;
+    border-top: var(--main-orange) solid 7px; 
+    border-bottom: var(--main-orange) double 5px; 
 }
 
 .content-block h2{
