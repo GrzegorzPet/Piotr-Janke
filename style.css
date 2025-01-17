@@ -38,7 +38,13 @@ body{
     width: fit-content;
 }
 
-header{
+.fill-content{
+    display: grid; 
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+}
+
+special-header{
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -113,7 +119,7 @@ header{
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
-/*-----CONTENT----*/
+/*-----CONTENT-----*/
 
 .motto-block{
     margin-top: 30px;
@@ -145,7 +151,7 @@ header{
     padding: 15px;
 }
 
-/*-----CONTENT-BOXes----*/
+/*-----CONTENT-BOXes-----*/
 
 .content-categories{
     width: var(--content-width);
@@ -188,12 +194,13 @@ header{
     text-transform: uppercase;
 }
 
-/*-----CONTENT-BLOCK----*/
+/*-----CONTENT-BLOCK-----*/
 
 .content-block{
     background-color: var(--content-gray-background);
     width: var(--content-width);
     margin-top: 25px;
+    margin-bottom: 25px;
     padding: 35px 70px;
     border-top: var(--main-orange) solid 7px; 
     border-bottom: var(--main-orange) double 5px; 
@@ -210,11 +217,36 @@ header{
     color: var(--content-gray-text);
 }
 
-/*-----FOOTER----*/
+/*-----UBER-UNS-----*/
 
-.footer{
+.uber-uns-list{
+    color: var(--content-gray-text);
+    margin: 20px 10px;
+}
+
+.uber-uns-list li{
+    margin: 10px;
+    font-weight: 600;
+}
+
+/*-----REALISIERUNGEN-----*/
+
+.content-images{
+    width: var(--content-width);
+    margin-top: 25px;
+    margin-bottom: 50px;
     display: flex;
-    margin-top: 50px;
+
+}
+
+.content-image img {
+    width: 97%;
+}
+
+/*-----FOOTER-----*/
+
+special-footer{
+    display: flex;
     padding: 15px 0;
     background-color: black;
     color: #ffffff;
@@ -226,7 +258,7 @@ header{
     flex: 1 1 0px;
 }
 
-.footer-part h2{
+.footer-part h2 a{
     font-size: 2rem;
     color: var(--main-orange);
 }
