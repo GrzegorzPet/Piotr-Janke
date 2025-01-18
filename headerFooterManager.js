@@ -20,22 +20,22 @@ class SpecialHeader extends HTMLElement {
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option">
-                                <a href="./uber-uns.html">
+                                <a href="/uber-uns.html">
                                     <span>Über uns</span>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option">
-                                <a href="./realisierungen.html">
+                                <a href="/realisierungen.html">
                                     <span>Realisierungen</span>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option">
-                                <a href="./angebot.html">
+                                <a href="/angebot.html">
                                     <span>Angebot</span>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option">
-                                <a href="./kontakt.html">
+                                <a href="/kontakt.html">
                                     <span>Kontakt</span>
                                 </a>
                             </li>
