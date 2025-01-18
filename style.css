@@ -12,6 +12,17 @@
     --content-width: 75vw;
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+::placeholder{
+    color: #ccc;
+}
+
 h2{
     font-size: 1.75rem;
 }
@@ -256,10 +267,66 @@ special-header{
 
 /*-----KONTAKT-----*/
 
-.kontakt p{
+.contact p{
     display: inline-block;
 }
 
+.contact-form{
+    width: 50%;
+}
+
+.contact-form h2{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+
+.contact-form input{
+    width: 100%;
+    padding: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    border: 3px solid var(--content-gray-background);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.contact-form input:focus-within{
+    outline: none;
+    border-color: var(--main-orange);
+}
+
+.contact-form textarea{
+    width:100%;
+    outline: none;
+    padding: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    border: 3px solid var(--content-gray-background);
+    border-radius: 10px;
+    margin-bottom: 25px;
+    resize: none;
+}
+
+.contact-form textarea:focus-within{
+    outline: none;
+    border-color: var(--main-orange);
+}
+
+.contact-form button{
+    background-color: var(--main-orange);
+    color: white;
+    font-weight: 600;
+    border-radius: 12px;
+    border: none;
+    font-size: 20px;
+    padding: 12px 20px;
+    display: flex;
+}
+
+.contact-form button:hover{
+    opacity: 80%;
+    cursor: pointer;
+}
 
 /*-----FOOTER-----*/
 

@@ -17,8 +17,8 @@
     <special-header></special-header>
     <main>
         <div class="content-block center">
-            <h2>Konktakt</h2>
-            <div class="kontakt">
+            <h2>Kontakt</h2>
+            <div class="contact">
                 <div>
                     <a href="tel:+4915510836317">
                         <i class="fa-solid fa-phone"></i>
@@ -31,6 +31,23 @@
                         <p>piotrjanke2009@googlemail.com</p>
                     </a>
                 </div>
+            </div>
+            <div class="contact-form">
+                <h2>Schreiben Sie uns</h2>
+                <form action="http://formsubmit.co/furion5@op.pl" method="post">
+                    <!-- Honeypot -->
+                    <input type="text" name="_honey" style="display: none;">
+
+                    <!-- Distable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="text" name="Name" placeholder="Vorname" autocomplete="none" required>
+                    <input type="text" name="Last&nbsp;Name" placeholder="Nachname" autocomplete="none" required>
+                    <input type="email" name="E-mail" placeholder="Email Adresse" autocomplete="none" required>
+                    <input type="tel" name="Phone" placeholder="Telefonnummer" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"  autocomplete="none">
+                    <textarea rows="5" cols="60" name="Comments,&nbsp;questions" placeholder="Text eingeben" autocomplete="none" required></textarea>
+                    <button type="submit" class="center">Nachricht Senden</button>
+                </form>
             </div>
         </div>
     </main>
