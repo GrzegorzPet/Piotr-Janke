@@ -9,7 +9,7 @@
     --content-gray-background: rgb(240, 240, 240);
     --content-gray-heading: rgb(64, 64, 64);
     --content-gray-text: rgb(85, 85, 85);
-    --content-width: 55vw;
+    --content-width: 75vw;
 }
 
 h2{
@@ -19,6 +19,10 @@ h2{
 a{
     color: white;
     text-decoration: none;
+}
+
+a:hover{
+    color: var(--main-orange);
 }
 
 ul{
@@ -94,16 +98,6 @@ special-header{
     display: flex;
     align-items: flex-end;
     gap: 50px
-}
-
-.main-navigation-list-option a{
-    color: white;
-    text-decoration: none;
-}
-
-.main-navigation-list-option:hover a{
-    color: var(--main-orange);
-    text-decoration: none;
 }
 
 .main-navigation-list-option span{
@@ -200,10 +194,9 @@ special-header{
     background-color: var(--content-gray-background);
     width: var(--content-width);
     margin-top: 25px;
-    margin-bottom: 25px;
     padding: 35px 70px;
     border-top: var(--main-orange) solid 7px; 
-    border-bottom: var(--main-orange) double 5px; 
+    color: var(--content-gray-text);
 }
 
 .content-block h2{
@@ -214,7 +207,14 @@ special-header{
     margin-top: 20px;
     font-weight: 500;
     text-align: justify;
+}
+
+.content-block a{
     color: var(--content-gray-text);
+}
+
+.content-block a:hover{
+    color: var(--main-orange);
 }
 
 /*-----UBER-UNS-----*/
@@ -232,16 +232,34 @@ special-header{
 /*-----REALISIERUNGEN-----*/
 
 .content-images{
+    background-color: var(--content-gray-background);
     width: var(--content-width);
-    margin-top: 25px;
+    padding: 15px;
     margin-bottom: 50px;
     display: flex;
+    gap: 15px;
+    align-items: stretch;
+    border-bottom: var(--main-orange) double 5px; 
+}
 
+.content-wrapping-images{
+    flex-wrap: wrap; 
+}
+
+.content-wrapping-image{
+    flex: 1 0 31%; 
 }
 
 .content-image img {
-    width: 97%;
+    width: 100%;
 }
+
+/*-----KONTAKT-----*/
+
+.kontakt p{
+    display: inline-block;
+}
+
 
 /*-----FOOTER-----*/
 
@@ -252,6 +270,7 @@ special-footer{
     color: #ffffff;
     position: relative;
     bottom: 0;
+    margin-top: 25px;
 }
 
 .footer-part{

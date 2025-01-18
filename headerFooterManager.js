@@ -30,12 +30,12 @@ class SpecialHeader extends HTMLElement {
                                 </a>
                             </li>
                             <li class="main-navigation-list-option">
-                                <a href="#">
+                                <a href="./angebot.html">
                                     <span>Angebot</span>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option">
-                                <a href="#">
+                                <a href="./kontakt.html">
                                     <span>Kontakt</span>
                                 </a>
                             </li>
