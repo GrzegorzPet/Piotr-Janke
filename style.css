@@ -116,6 +116,10 @@ special-header{
     font-weight: 500;
 }
 
+.hide-on-desktop{
+    display: none;
+}
+
 .second-bar{
     background-color: var(--main-orange);
     color: white;
@@ -384,6 +388,14 @@ special-footer{
     }
 
     /*-----HEADER----*/
+    .hide-on-mobile{
+        display: none;
+    }
+
+    .hide-on-desktop{
+        display: flex;
+    }
+
     .first-bar{
         height: 300px;
     }
@@ -395,10 +407,6 @@ special-footer{
     .logo-container span
     {
         font-size: 3rem;
-    }
-
-    .top-navigation, .title{
-        display: none;
     }
 
     .main-navigation-list-option span{

@@ -3,7 +3,7 @@ class SpecialHeader extends HTMLElement {
         this.innerHTML =`
         <div class="topbar">
             <div class="first-bar">
-                <div class="title">
+                <div class="title hide-on-mobile">
                     <div class="center">
                         <h1>Handwerker</h1>
                     </div>
@@ -19,25 +19,28 @@ class SpecialHeader extends HTMLElement {
                 <div class="top-navigation">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
-                            <li class="main-navigation-list-option">
+                            <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./uber-uns">
                                     <span>Über uns</span>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-option">
+                            <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./realisierungen">
                                     <span>Realisierungen</span>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-option">
+                            <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./angebot">
                                     <span>Angebot</span>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-option">
+                            <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./kontakt">
                                     <span>Kontakt</span>
                                 </a>
+                            </li>
+                            <li class="main-navigation-list-option hide-on-desktop">
+                                <span>=</span>
                             </li>
                         </ul>
                     </nav>
