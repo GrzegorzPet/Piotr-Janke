@@ -9,7 +9,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
                 </div>
                 <div class="logo">
-                    <a href="./index.html">
+                    <a href="./index">
                         <div class="logo-container center">
                             <img src="img/logo.svg" alt="logo">
                             <span>Piotr Janke</span>
@@ -58,7 +58,7 @@ class SpecialFooter extends HTMLElement {
         this.innerHTML =`
         <div class="footer-part">
             <h2 class="center">
-                <a href="./index.html">Piotr Janke </a>
+                <a href="./index.html">Piotr Janke</a>
             </h2>
         </div>
         <div class="footer-part">

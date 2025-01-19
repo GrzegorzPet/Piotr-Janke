@@ -129,7 +129,8 @@ special-header{
 .motto-block{
     margin-top: 30px;
     width: var(--content-width);
-    padding: 50px 100px;
+    padding: 50px;
+    height: 270px;
     text-transform: uppercase;
     background: var(--main-orange);
     color: white;
@@ -140,6 +141,15 @@ special-header{
     padding-top: 15px;
     padding-bottom: 15px;
     font-size: 1.15rem;
+}
+
+.motto-block a{
+    transition: .3s ease-in-out;
+}
+
+.motto-block a:hover{
+    font-size: 1.30rem;
+    color:white;
 }
 
 .divider{
@@ -218,6 +228,10 @@ special-header{
     margin-top: 20px;
     font-weight: 500;
     text-align: justify;
+}
+
+.content-block>p>a{
+    color:darkblue
 }
 
 .content-block a{
