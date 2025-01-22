@@ -12,11 +12,10 @@ class SpecialHeader extends HTMLElement {
                     <a href="./index">
                         <div class="logo-container center">
                             <img src="img/logo.svg" alt="logo">
-                            <span>Piotr Janke</span>
                         </div>
                     </a>
                 </div>
-                <div class="top-navigation">
+                <div class="top-navigation fixed-on-mobile">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option hide-on-mobile">
@@ -39,10 +38,37 @@ class SpecialHeader extends HTMLElement {
                                     <span>Kontakt</span>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-option hide-on-desktop">
+                            <li onclick = showSidebar() class="main-navigation-list-option hide-on-desktop">
                                 <span>=</span>
                             </li>
                         </ul>
+                        <div class="hide-on-desktop">
+                            <ul class="main-navigation-mobile-list center">
+                                <li onclick = hideSidebar() class="main-navigation-list-option main-navigation-mobile-list-option">
+                                    <span>X</span>
+                                </li>
+                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                    <a href="./uber-uns">
+                                        <span>Über uns</span>
+                                    </a>
+                                </li>
+                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                    <a href="./realisierungen">
+                                        <span>Realisierungen</span>
+                                    </a>
+                                </li>
+                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                    <a href="./angebot">
+                                        <span>Angebot</span>
+                                    </a>
+                                </li>
+                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                    <a href="./kontakt">
+                                        <span>Kontakt</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -54,6 +80,16 @@ class SpecialHeader extends HTMLElement {
         </div>
         `
     }
+}
+
+function showSidebar(){
+    const sidebar = document.querySelector('.main-navigation-mobile-list')
+    sidebar.style.display = 'flex'
+}
+
+function hideSidebar(){
+    const sidebar = document.querySelector('.main-navigation-mobile-list')
+    sidebar.style.display = 'none'
 }
 
 class SpecialFooter extends HTMLElement {
