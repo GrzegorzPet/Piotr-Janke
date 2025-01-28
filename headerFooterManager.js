@@ -39,30 +39,30 @@ class SpecialHeader extends HTMLElement {
                                 </a>
                             </li>
                             <li onclick = showSidebar() class="main-navigation-list-option hide-on-desktop">
-                                <span>=</span>
+                                <span><i class="fa-solid fa-bars"></i></span>
                             </li>
                         </ul>
                         <div class="hide-on-desktop">
                             <ul class="main-navigation-mobile-list center">
-                                <li onclick = hideSidebar() class="main-navigation-list-option main-navigation-mobile-list-option">
-                                    <span>X</span>
+                                <li onclick = hideSidebar() class="main-navigation-list-option">
+                                    <span><i class="fa-solid fa-x"></i></span>
                                 </li>
-                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                <li class="main-navigation-list-option">
                                     <a href="./uber-uns">
                                         <span>Über uns</span>
                                     </a>
                                 </li>
-                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                <li class="main-navigation-list-option">
                                     <a href="./realisierungen">
                                         <span>Realisierungen</span>
                                     </a>
                                 </li>
-                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                <li class="main-navigation-list-option">
                                     <a href="./angebot">
                                         <span>Angebot</span>
                                     </a>
                                 </li>
-                                <li class="main-navigation-list-option main-navigation-mobile-list-option">
+                                <li class="main-navigation-list-option">
                                     <a href="./kontakt">
                                         <span>Kontakt</span>
                                     </a>
@@ -85,11 +85,13 @@ class SpecialHeader extends HTMLElement {
 function showSidebar(){
     const sidebar = document.querySelector('.main-navigation-mobile-list')
     sidebar.style.display = 'flex'
+    document.body.style.overflow= 'hidden'
 }
 
 function hideSidebar(){
     const sidebar = document.querySelector('.main-navigation-mobile-list')
     sidebar.style.display = 'none'
+    document.body.style.overflow= 'visible'
 }
 
 class SpecialFooter extends HTMLElement {
