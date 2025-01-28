@@ -11,7 +11,7 @@ class SpecialHeader extends HTMLElement {
                 <div class="logo">
                     <a href="./index">
                         <div class="logo-container center">
-                            <img src="img/logo.svg" alt="logo">
+                            <img src="img/logo2.svg" alt="logo">
                         </div>
                     </a>
                 </div>
