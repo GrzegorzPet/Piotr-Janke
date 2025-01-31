@@ -59,14 +59,16 @@ body{
     grid-template-rows: auto 1fr auto;
 }
 
+ul{
+    list-style: none;
+}
+
+/*-----HEADER-----*/
+
 special-header{
     position: sticky;
     top: 0;
     z-index: 998;
-}
-
-ul{
-    list-style: none;
 }
 
 .first-bar{
@@ -142,6 +144,77 @@ ul{
 }
 
 /*-----CONTENT-----*/
+
+/*-----SLIDER-----*/
+
+.slider-wrapper{
+    position: relative;
+    width: 100vw;
+    height: 20vw;
+    margin-bottom: 1rem;
+}
+
+.slider-wrapper span{
+    position: absolute;
+    color: white;
+    bottom: 7%;
+    left: 12%;
+    font-size: calc(2vw + 1rem);
+    z-index: 2;
+    text-shadow: 5px 5px 15px rgb(0, 0, 0, 1);
+}
+
+.slider-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0px -10rem 5rem -2rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.slider img{
+    width: 100%;
+    position: absolute;
+    inset: 1;
+    opacity: 0;
+    aspect-ratio: 5/1;
+    object-fit: cover;
+    transition: 200ms opacity ease-in-out;
+}
+
+img.displaySlide{
+    opacity: 1;
+}
+
+.slider-wrapper button{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    background-color: rgb(0, 0, 0, 0);
+    padding: 3px 17px;
+    color: rgb(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.slider-wrapper button:hover,
+.slider-wrapper button:focus{
+    color: white;
+}
+
+.prev-slide{
+    left: 1rem;
+}
+
+.next-slide{
+    right: 1rem;
+}
+
+/*-----MOTTO-----*/
 
 .motto-block{
     margin-top: 30px;
@@ -441,6 +514,24 @@ special-footer{
     }
 
     /*-----CONTENT----*/
+
+    /*-----SLIDER-----*/
+
+    .slider-wrapper{
+        height: calc(100vw*2/3);
+    }
+
+    .slider-wrapper span{
+        left: 5%;
+        font-size: calc(6vw + 0.5rem);
+    }
+
+
+    .slider img{
+        aspect-ratio: 3/2;
+    }
+
+    /*-----MOTTO----*/
 
     .motto-block{
         /* padding: calc(3vw + 0.5rem); */

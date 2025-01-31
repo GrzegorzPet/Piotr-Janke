@@ -16,6 +16,17 @@
     <special-header></special-header>
     <main>
         <div class="content">
+            <div class="slider-wrapper center">
+                <span>Realisierungen</span>
+                <a href="/realisierungen.html"><div class="slider-shadow"></div></a>
+                <div class="slider">
+                    <img id="slide" src="img/manu-po-1.jpg" alt="manufaktura po rewitalizacji 1"/>
+                    <img id="slide" src="img/manu-po-2.jpg" alt="manufaktura po rewitalizacji 2"/>
+                    <img id="slide" src="img/manu-po-3.jpg" alt="manufaktura po rewitalizacji 3"/>
+                </div>
+                <button class="prev-slide" onclick="prevSlide()">&#10094</button>
+                <button class="next-slide" onclick="nextSlide()">&#10095</button>
+            </div>
             <div class="motto-block center">
                 <h2>für sie immer da</h2>
                 <p>ein ansprechpartner für alle arbeiten! rufen sie an!</p>
@@ -56,4 +67,5 @@
     </main>
     <special-footer></special-footer>
     <script src="./headerFooterManager.js"></script>
+    <script src="./sliderManager.js"></script>
 </body>
