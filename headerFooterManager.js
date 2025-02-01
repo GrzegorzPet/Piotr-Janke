@@ -3,19 +3,19 @@ class SpecialHeader extends HTMLElement {
         this.innerHTML =`
         <div class="topbar">
             <div class="first-bar">
-                <div class="title hide-on-mobile">
+                <div class="title first-bar-item hide-on-mobile">
                     <div class="center">
                         <h1>Handwerker</h1>
                     </div>
                 </div>
-                <div class="logo">
+                <div class="logo first-bar-item">
                     <a href="./index">
-                        <div class="logo-container center">
+                        <div class="logo-container  center">
                             <img src="img/logo.svg" alt="logo">
                         </div>
                     </a>
                 </div>
-                <div class="top-navigation fixed-on-mobile">
+                <div class="top-navigation first-bar-item fixed-on-mobile">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option hide-on-mobile">
