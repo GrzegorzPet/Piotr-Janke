@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size: 12px;
+}
+
 :root{
     --main-orange: rgb(241, 106, 36);
     --facebook-blue: rgb(59, 89, 152); 
@@ -10,6 +14,13 @@
     --content-gray-heading: rgb(64, 64, 64);
     --content-gray-text: rgb(85, 85, 85);
     --content-width: 75vw;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
 }
 
 input:-webkit-autofill,
@@ -23,8 +34,32 @@ input:-webkit-autofill:active{
     color: #ccc;
 }
 
+h1{
+    font-size: calc(1.5vw + 0.75rem);
+}
+
 h2{
-    font-size: 1.75rem;
+    font-size: calc(1.5vw + 0.75rem);
+}
+
+h3{
+    font-size: calc(1.20vw + 0.6rem);
+}
+
+h4,
+button{
+    font-size: calc(0.9vw + 0.45rem);
+}
+
+p1,
+i{
+    font-size: calc(0.67vw + 0.33rem);
+}
+
+p,
+input,
+textarea{
+    font-size: calc(0.6vw + 0.3rem);
 }
 
 a{
@@ -38,13 +73,6 @@ a:hover{
 
 ul{
     padding: 0;
-}
-
-body{
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold;
-    font-style: normal;
 }
 
 .center{
@@ -68,11 +96,12 @@ ul{
 special-header{
     position: sticky;
     top: 0;
-    z-index: 998;
+    z-index: 997;
+    width: 100%;
 }
 
 .first-bar{
-    height: 150px;
+    padding: 1rem 0;
     background-color: black;
     color: white;
     display: flex;
@@ -81,7 +110,8 @@ special-header{
 }
 
 .first-bar-item{
-    width: calc(100vw/3);
+    width: calc(100%/3);
+    overflow: hidden;
 }
 
 .title{
@@ -89,7 +119,7 @@ special-header{
 }
 
 .logo-container{
-    width: clamp(11rem ,calc(14vw + 2rem), 12.5rem);
+    width: clamp(13rem, calc(9vw + 4.5rem), 17rem);
 }
 
 .logo-container img{
@@ -100,7 +130,8 @@ special-header{
 .main-navigation-list{
     display: flex;
     align-items: flex-end;
-    gap: calc(1vw + 1rem);
+    gap: calc(2vw + 1rem);
+    white-space: nowrap;
 }
 
 .main-navigation-mobile-list{
@@ -109,20 +140,13 @@ special-header{
     top: 0;
     right: 0;
     z-index: 999;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     display: none;
     flex-direction: column;
     gap: 5vw;
     background-color: #00000088;
     backdrop-filter: blur(10px);
-    font-size: 0.1rem;
-}
-
-.main-navigation-list-option span{
-    font-size: clamp(0rem, calc(0.7vw + 0.3rem), 1.25rem);
-    font-weight: 500;
-    white-space: nowrap;
 }
 
 .hide-on-desktop{
@@ -132,10 +156,9 @@ special-header{
 .second-bar{
     background-color: var(--main-orange);
     color: white;
-    height: 2rem;
     padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-    font-size: 1.3rem;
 }
 
 /*-----CONTENT-----*/
@@ -144,17 +167,16 @@ special-header{
 
 .slider-wrapper{
     position: relative;
-    width: 100vw;
+    width: 100%;
     height: 20vw;
     margin-bottom: 1rem;
 }
 
-.slider-wrapper span{
+.slider-wrapper h2{
     position: absolute;
     color: white;
     bottom: 7%;
     left: 12%;
-    font-size: calc(2vw + 1rem);
     z-index: 2;
     text-shadow: 5px 5px 15px rgb(0, 0, 0, 1);
 }
@@ -163,7 +185,7 @@ special-header{
     position: absolute;
     width: 100%;
     height: 100%;
-    top: 0;
+    bottom: 0;
     left: 0;
     box-shadow: inset 0px -10rem 5rem -2rem rgba(0, 0, 0, 0.5);
     z-index: 1;
@@ -171,6 +193,7 @@ special-header{
 
 .slider img{
     width: 100%;
+    height: 100%;
     position: absolute;
     inset: 1;
     opacity: 0;
@@ -193,7 +216,7 @@ img.displaySlide{
     color: rgb(255, 255, 255, 0.5);
     border: none;
     cursor: pointer;
-    z-index: 3;
+    z-index: 5;
 }
 
 .slider-wrapper button:hover,
@@ -214,21 +237,16 @@ img.displaySlide{
 .motto-block{
     margin-top: 30px;
     width: var(--content-width);
-    padding: calc(3vw + 0.5rem);
-    height: calc(11vw + 6rem);
+    padding: calc(2.5vw + 1.25rem);
+    height: calc(9vw + 9rem);
     text-transform: uppercase;
     background: var(--main-orange);
     color: white;
     text-align: center;
 }
 
-.motto-block h2{
-    font-size: calc(1vw + 0.7rem);
-}
-
 .motto-block p{
     padding: 1vw 0;
-    font-size: calc(0.7vw + 0.5rem);
 }
 
 .motto-block a{
@@ -236,7 +254,7 @@ img.displaySlide{
 }
 
 .motto-block a:hover{
-    font-size: 1.30rem;
+    font-size: calc(0.67vw + 0.67rem);
     color:white;
 }
 
@@ -289,12 +307,11 @@ img.displaySlide{
     opacity: 100%;
 }
 
-.content-box span{
+.content-box h3{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: calc(1vw + 0.75rem);
     color: white;
     text-transform: uppercase;
 }
@@ -304,18 +321,14 @@ img.displaySlide{
 .content-block{
     background-color: var(--content-gray-background);
     width: var(--content-width);
-    margin-top: 25px;
-    padding: 35px 70px;
-    border-top: var(--main-orange) solid 7px; 
+    margin-top: 2rem;
+    padding: 3rem calc(3vw + 1.5rem);
+    border-top: var(--main-orange) solid 0.5rem; 
     color: var(--content-gray-text);
 }
 
-.content-block h2{
-    color: var(--content-gray-heading);
-}
-
 .content-block p{
-    margin-top: 20px;
+    margin-top: 1.5rem;
     font-weight: 500;
     text-align: justify;
 }
@@ -339,7 +352,7 @@ img.displaySlide{
     margin: 20px 10px;
 }
 
-.uber-uns-list li{
+.uber-uns-list li p{
     margin: 10px;
     font-weight: 600;
 }
@@ -349,12 +362,12 @@ img.displaySlide{
 .content-images{
     background-color: var(--content-gray-background);
     width: var(--content-width);
-    padding: 15px;
-    margin-bottom: 50px;
+    padding: 1.5rem;
+    margin-bottom: 4rem;
     display: flex;
-    gap: 15px;
+    gap: 1.5rem;
     align-items: stretch;
-    border-bottom: var(--main-orange) double 5px; 
+    border-bottom: var(--main-orange) double 0.5rem; 
 }
 
 .content-wrapping-images{
@@ -376,22 +389,22 @@ img.displaySlide{
 }
 
 .contact-form{
-    width: 50%;
+    width: calc(30vw + 15rem);
 }
 
-.contact-form h2{
-    margin-top: 50px;
-    margin-bottom: 15px;
+.contact-form h4{
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .contact-form input{
     width: 100%;
-    padding: 16px;
+    padding: 1.5rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     border: 3px solid var(--content-gray-background);
     border-radius: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 1.6rem;
 }
 
 .contact-form input:focus-within{
@@ -402,12 +415,12 @@ img.displaySlide{
 .contact-form textarea{
     width:100%;
     outline: none;
-    padding: 16px;
+    padding: 1rem;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     border: 3px solid var(--content-gray-background);
     border-radius: 10px;
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
     resize: none;
 }
 
@@ -422,8 +435,8 @@ img.displaySlide{
     font-weight: 600;
     border-radius: 12px;
     border: none;
-    font-size: 20px;
-    padding: 12px 20px;
+
+    padding: 1rem 1.5rem;
     display: flex;
 }
 
@@ -436,12 +449,13 @@ img.displaySlide{
 
 special-footer{
     display: flex;
-    padding: 15px 0;
+    padding: 1rem 0 1.5rem;
     background-color: black;
     color: #ffffff;
     position: relative;
     bottom: 0;
-    margin-top: 25px;
+    margin-top: 2rem;
+    width: 100%;
 }
 
 .footer-part{
@@ -449,14 +463,13 @@ special-footer{
 }
 
 .footer-part h2 a{
-    font-size: 2rem;
     color: var(--main-orange);
 }
 
-.footer-part p{
+.footer-part p1{
     display: inline-block;
-    margin-left: 0.25rem;
-    margin-top: 5px;
+    margin-left: 0.35rem;
+    margin-top: 0.75rem;
 }
 
 .facebook-link:hover{
@@ -470,7 +483,32 @@ special-footer{
     }
 
     h2{
-        font-size: 1.25rem;
+        font-size: calc(3vw + 1.5rem);
+    }
+    
+    h3{
+        font-size: calc(2vw + 1rem);
+    }
+
+    h4,
+    button{
+        font-size: calc(1.3vw + 0.65rem);
+    }
+
+    p1,
+    i{
+        font-size: calc(1.1vw + 0.55rem);
+    }
+    
+    p,
+    input,
+    textarea{
+        font-size: calc(0.9vw + 0.45rem);
+    }
+    
+    a{
+        color: white;
+        text-decoration: none;
     }
 
     /*-----HEADER----*/
@@ -484,30 +522,22 @@ special-footer{
 
     .fixed-on-mobile{
         position: fixed;
-        top: 3dvw;
-        right: 3dvw;
+        top: 2.5vw;
+        right: 5vw;
+        width: fit-content;
     }
 
     .main-navigation-list-option{
         padding-left: 5vw;
     }
 
+    .main-navigation-list-option i,
     .main-navigation-list-option span{
-        font-size: clamp(3.5rem, calc(7vw + 2rem), 5.5rem);
-    }
-
-    .first-bar{
-        height: 30vw;
+        font-size: calc(4vw + 2rem);
     }
 
     .logo-container{
-        width: calc(30vw + 1rem);
-    }
-
-    .second-bar{
-        padding-top: 1vw;
-        height: calc(6vw + 0.5rem);
-        font-size: calc(3vw + 0.5rem);
+        width: calc(15vw + 7.5rem);
     }
 
     /*-----CONTENT----*/
@@ -520,9 +550,7 @@ special-footer{
 
     .slider-wrapper span{
         left: 5%;
-        font-size: calc(6vw + 0.5rem);
     }
-
 
     .slider img{
         aspect-ratio: 3/2;
@@ -531,25 +559,15 @@ special-footer{
     /*-----MOTTO----*/
 
     .motto-block{
-        /* padding: calc(3vw + 0.5rem); */
-        height: calc(16vw + 10rem);
-    }
-    
-    .motto-block h2{
-        font-size: calc(2vw + 1rem);
+        height: calc(18vw + 9rem);
     }
 
     .motto-block p{
-        padding: 2.5vw 0;
-        font-size: calc(1vw + 0.75rem);
-    }
-
-    .motto-block a{
-        font-size: calc(1.25vw + 0.9rem);
+        padding: calc(1.8vw + 0.9rem) 0;
     }
 
     .motto-block a:hover{
-        font-size: calc(1.5vw + 1rem);
+        font-size: calc(1.1vw + 0.55rem);
     }
 
     /*-----CONTENT-BOXES----*/
@@ -560,10 +578,12 @@ special-footer{
 
     .content-box{
         flex: auto;
-        height: calc(12vw + 3rem);
+        height: calc(9vw + 4.5rem);
     }
 
-    .content-box span{
-        font-size: calc(1.5vw + 1rem);
+    /*-----REALISIERUNGEN-----*/
+
+    .content-image{
+        margin-top: 2rem;  
     }
 }

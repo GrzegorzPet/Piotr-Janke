@@ -9,33 +9,33 @@ class SpecialHeader extends HTMLElement {
                     </div>
                 </div>
                 <div class="logo first-bar-item">
-                    <a href="./index">
-                        <div class="logo-container  center">
+                    <div class="logo-container  center">
+                        <a href="./index.html">
                             <img src="img/logo.svg" alt="logo">
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
                 <div class="top-navigation first-bar-item fixed-on-mobile">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./uber-uns">
-                                    <span>Über uns</span>
+                                <a href="./uber-uns.html">
+                                    <p1>Über uns</p1>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./realisierungen">
-                                    <span>Realisierungen</span>
+                                <a href="./realisierungen.html">
+                                    <p1>Realisierungen</p1>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./angebot">
-                                    <span>Angebot</span>
+                                <a href="./angebot.html">
+                                    <p1>Angebot</p1>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./kontakt">
-                                    <span>Kontakt</span>
+                                <a href="./kontakt.html">
+                                    <p1>Kontakt</p1>
                                 </a>
                             </li>
                             <li onclick = showSidebar() class="main-navigation-list-option hide-on-desktop">
@@ -48,22 +48,22 @@ class SpecialHeader extends HTMLElement {
                                     <span><i class="fa-solid fa-x"></i></span>
                                 </li>
                                 <li class="main-navigation-list-option">
-                                    <a href="./uber-uns">
+                                    <a href="./uber-uns.html">
                                         <span>Über uns</span>
                                     </a>
                                 </li>
                                 <li class="main-navigation-list-option">
-                                    <a href="./realisierungen">
+                                    <a href="./realisierungen.html">
                                         <span>Realisierungen</span>
                                     </a>
                                 </li>
                                 <li class="main-navigation-list-option">
-                                    <a href="./angebot">
+                                    <a href="./angebot.html">
                                         <span>Angebot</span>
                                     </a>
                                 </li>
                                 <li class="main-navigation-list-option">
-                                    <a href="./kontakt">
+                                    <a href="./kontakt.html">
                                         <span>Kontakt</span>
                                     </a>
                                 </li>
@@ -74,7 +74,7 @@ class SpecialHeader extends HTMLElement {
             </div>
             <div class="second-bar">
                 <div class="center">
-                    <span>Montage und Renovierung</span>
+                    <h4>Montage und Renovierung</h4>
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@ function hideSidebar(){
 class SpecialFooter extends HTMLElement {
     connectedCallback() { 
         this.innerHTML =`
-        <div class="footer-part">
+        <div class="footer-part hide-on-mobile">
             <h2 class="center">
                 <a href="./index.html">Piotr Janke</a>
             </h2>
@@ -107,13 +107,13 @@ class SpecialFooter extends HTMLElement {
                 <div>
                     <a href="tel:+4915510836317">
                         <i class="fa-solid fa-phone"></i>
-                        <p>+4915510836317</p> 
+                        <p1>+4915510836317</p1> 
                     </a>
                 </div>
                 <div>
                     <a href="mailto:piotrjanke2009@googlemail.com">
                         <i class="fa-solid fa-envelope"></i>
-                        <p>piotrjanke2009@googlemail.com</p>
+                        <p1>piotrjanke2009@googlemail.com</p1>
                     </a>
                 </div>
             </div>
@@ -122,7 +122,7 @@ class SpecialFooter extends HTMLElement {
             <div class="center">
                 <a href="https://www.facebook.com/" class="facebook-link">
                     <i class="fa-brands fa-facebook"></i>
-                    <p>Piotr Janke</p>
+                    <p1>Piotr Janke</p1>
                 </a>
             </div>
         </div>
