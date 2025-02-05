@@ -58,8 +58,29 @@ i{
 
 p,
 input,
-textarea{
+textarea,
+th,
+td{
     font-size: calc(0.6vw + 0.3rem);
+}
+
+table{
+    margin-top: 1rem;
+}
+
+th{
+    padding-top: 0.5rem;
+    font-weight: 600;
+    text-align: left;
+    width: calc(7vw + 3.5rem);
+    border-bottom: 1px solid var(--content-gray-text);
+    /* border-right: 1px solid var(--content-gray-text); */
+
+}
+
+td{
+    font-weight: 500;
+    border-bottom: 1px solid var(--content-gray-text);
 }
 
 a{
@@ -87,10 +108,6 @@ ul{
     grid-template-rows: auto 1fr auto;
 }
 
-ul{
-    list-style: none;
-}
-
 /*-----HEADER-----*/
 
 special-header{
@@ -112,6 +129,10 @@ special-header{
 .first-bar-item{
     width: calc(100%/3);
     overflow: hidden;
+}
+
+.first-bar ul{
+    list-style: none;
 }
 
 .title{
@@ -243,8 +264,7 @@ img.displaySlide{
 .motto-block{
     margin-top: 30px;
     width: var(--content-width);
-    padding: calc(2.5vw + 1.25rem);
-    height: calc(9vw + 9rem);
+    padding: calc(2vw + 1rem);
     text-transform: uppercase;
     background: var(--main-orange);
     color: white;
@@ -253,14 +273,18 @@ img.displaySlide{
 
 .motto-block p{
     padding: 1vw 0;
-}
-
-.motto-block a{
     transition: .3s ease-in-out;
 }
 
-.motto-block a:hover{
-    font-size: calc(0.67vw + 0.67rem);
+.motto-block a{
+    display:block;
+    width: fit-content;
+    margin: 0 auto;
+    
+}
+
+.motto-block a p:hover{
+    transform: scale(1.25);
     color:white;
 }
 
@@ -506,9 +530,12 @@ special-footer{
         font-size: calc(1.1vw + 0.55rem);
     }
     
+    
     p,
     input,
-    textarea{
+    textarea,
+    th,
+    td{
         font-size: calc(0.9vw + 0.45rem);
     }
     
