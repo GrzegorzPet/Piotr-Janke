@@ -3,19 +3,19 @@ class SpecialHeader extends HTMLElement {
         this.innerHTML =`
         <div class="topbar">
             <div class="first-bar">
-                <div class="title first-bar-item hide-on-mobile">
+                <div class="title hide-on-mobile">
                     <div class="center">
                         <h1>Handwerker</h1>
                     </div>
                 </div>
-                <div class="logo first-bar-item">
+                <div class="logo">
                     <div class="logo-container  center">
                         <a href="./index.html">
                             <img src="img/logo.svg" alt="logo">
                         </a>
                     </div>
                 </div>
-                <div class="top-navigation first-bar-item fixed-on-mobile">
+                <div class="top-navigation fixed-on-mobile">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option hide-on-mobile">
@@ -30,7 +30,7 @@ class SpecialHeader extends HTMLElement {
                             </li>
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./angebot.html">
-                                    <p1>Angebot</p1>
+                                    <p1>Dienstleistungen</p1>
                                 </a>
                             </li>
                             <li class="main-navigation-list-option hide-on-mobile">
@@ -120,8 +120,14 @@ class SpecialFooter extends HTMLElement {
         </div>
         <div class="footer-part">
             <div class="center">
-                <a href="https://www.facebook.com/" class="facebook-link">
+                <a href="https://www.facebook.com/profile.php?id=61560864780478" class="facebook-link">
                     <i class="fa-brands fa-facebook"></i>
+                    <p1>Piotr Janke</p1>
+                </a>
+            </div>
+            <div class="center">
+                <a href="https://www.facebook.com/profile.php?id=61560864780478" class="instagram-link">
+                    <i class="fa-brands fa-instagram"></i>
                     <p1>Piotr Janke</p1>
                 </a>
             </div>

@@ -9,7 +9,8 @@ html{
 
 :root{
     --main-orange: rgb(241, 106, 36);
-    --facebook-blue: rgb(59, 89, 152); 
+    --facebook-color: rgb(59, 89, 152); 
+    --instagram-color: rgb(205, 72, 107);
     --content-gray-background: rgb(240, 240, 240);
     --content-gray-heading: rgb(64, 64, 64);
     --content-gray-text: rgb(85, 85, 85);
@@ -118,7 +119,6 @@ special-header{
 }
 
 .first-bar{
-    padding: 1rem 0;
     background-color: black;
     color: white;
     display: flex;
@@ -126,26 +126,27 @@ special-header{
     align-items: center;
 }
 
-.first-bar-item{
-    width: calc(100%/3);
-    overflow: hidden;
-}
-
 .first-bar ul{
     list-style: none;
 }
 
 .title{
+    width:42%;
     color: var(--main-orange);
 }
 
-.logo-container{
-    width: clamp(13rem, calc(9vw + 4.5rem), 17rem);
+.logo{
+    width: 16%;
 }
 
 .logo-container img{
     width: 100%;
-    padding: 10px;
+    padding: 1.25vw
+}
+
+.top-navigation{
+    width: 42%;
+    overflow: hidden;
 }
 
 .main-navigation-list{
@@ -503,7 +504,11 @@ special-footer{
 }
 
 .facebook-link:hover{
-    color: var(--facebook-blue);
+    color: var(--facebook-color);
+}
+
+.instagram-link:hover{
+    color: var(--instagram-color);
 }
 
 @media (orientation: portrait) {
@@ -522,12 +527,12 @@ special-footer{
 
     h4,
     button{
-        font-size: calc(1.3vw + 0.65rem);
+        font-size: calc(1.5vw + 0.75rem);
     }
 
     p1,
     i{
-        font-size: calc(1.1vw + 0.55rem);
+        font-size: calc(1.20vw + 0.60rem);
     }
     
     
@@ -536,7 +541,7 @@ special-footer{
     textarea,
     th,
     td{
-        font-size: calc(0.9vw + 0.45rem);
+        font-size: calc(1vw + 0.5rem);
     }
     
     a{
@@ -569,8 +574,13 @@ special-footer{
         font-size: calc(4vw + 2rem);
     }
 
-    .logo-container{
-        width: calc(15vw + 7.5rem);
+    .logo
+    {
+        width: 50%;
+    }
+
+    .logo-container img{
+        padding: 4vw;
     }
 
     /*-----CONTENT----*/
@@ -591,9 +601,9 @@ special-footer{
 
     /*-----MOTTO----*/
 
-    .motto-block{
+    /* .motto-block{
         height: calc(18vw + 9rem);
-    }
+    } */
 
     .motto-block p{
         padding: calc(1.8vw + 0.9rem) 0;
@@ -618,5 +628,12 @@ special-footer{
 
     .content-image{
         margin-top: 2rem;  
+    }
+
+    /*-----FOOTER-----*/
+
+    .footer-part{
+        /* flex: 1 1 0px; */
+        flex: auto;
     }
 }
