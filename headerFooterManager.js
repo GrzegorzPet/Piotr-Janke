@@ -47,26 +47,31 @@ class SpecialHeader extends HTMLElement {
                                 <li onclick = hideSidebar() class="main-navigation-list-option">
                                     <span><i class="fa-solid fa-x"></i></span>
                                 </li>
+                                <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
                                     <a href="./uber-uns.html">
-                                        <span>Über uns</span>
+                                        <p1>Über uns</p1>
                                     </a>
                                 </li>
+                                <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
                                     <a href="./realisierungen.html">
-                                        <span>Realisierungen</span>
+                                        <p1>Realisierungen</p1>
                                     </a>
                                 </li>
+                                <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
                                     <a href="./angebot.html">
-                                        <span>Angebot</span>
+                                        <p1>Angebot</p1>
                                     </a>
                                 </li>
+                                <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
                                     <a href="./kontakt.html">
-                                        <span>Kontakt</span>
+                                        <p1>Kontakt</p1>
                                     </a>
                                 </li>
+                                <li class=main-navigation-mobile-list-divider></li>
                             </ul>
                         </div>
                     </nav>
@@ -107,13 +112,13 @@ class SpecialFooter extends HTMLElement {
                 <div>
                     <a href="tel:+4915510836317">
                         <i class="fa-solid fa-phone"></i>
-                        <p1>+4915510836317</p1> 
+                        <p>+4915510836317</p> 
                     </a>
                 </div>
                 <div>
                     <a href="mailto:piotrjanke2009@googlemail.com">
                         <i class="fa-solid fa-envelope"></i>
-                        <p1>piotrjanke2009@googlemail.com</p1>
+                        <p>piotrjanke2009@googlemail.com</p>
                     </a>
                 </div>
             </div>
@@ -122,13 +127,13 @@ class SpecialFooter extends HTMLElement {
             <div class="center">
                 <a href="https://www.facebook.com/profile.php?id=61560864780478" class="facebook-link">
                     <i class="fa-brands fa-facebook"></i>
-                    <p1>Piotr Janke</p1>
+                    <p>Piotr Janke</p>
                 </a>
             </div>
             <div class="center">
                 <a href="https://www.facebook.com/profile.php?id=61560864780478" class="instagram-link">
                     <i class="fa-brands fa-instagram"></i>
-                    <p1>Piotr Janke</p1>
+                    <p>Piotr Janke</p>
                 </a>
             </div>
         </div>

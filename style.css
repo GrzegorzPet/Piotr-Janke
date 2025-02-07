@@ -4,7 +4,7 @@
 }
 
 html{
-    font-size: 12px;
+    font-size: 16px;
 }
 
 :root{
@@ -20,7 +20,6 @@ html{
 body{
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: bold;
     font-style: normal;
 }
 
@@ -54,7 +53,8 @@ button{
 
 p1,
 i{
-    font-size: calc(0.67vw + 0.33rem);
+    font-size: calc(0.7vw + 0.35rem);
+    font-weight: 600;
 }
 
 p,
@@ -75,7 +75,6 @@ th{
     text-align: left;
     width: calc(7vw + 3.5rem);
     border-bottom: 1px solid var(--content-gray-text);
-    /* border-right: 1px solid var(--content-gray-text); */
 
 }
 
@@ -152,7 +151,7 @@ special-header{
 .main-navigation-list{
     display: flex;
     align-items: flex-end;
-    gap: calc(2vw + 1rem);
+    gap: calc(1.5vw + 0.75rem);
     white-space: nowrap;
 }
 
@@ -163,7 +162,8 @@ special-header{
     top: 0;
     right: -100vw;
     z-index: 999;
-    transition: right 1000ms ease-in-out;
+    opacity: 0;
+    transition: opacity 1ms linear 450ms, right 450ms ease-in-out;
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -173,8 +173,17 @@ special-header{
     backdrop-filter: blur(10px);
 }
 
+.main-navigation-mobile-list-divider{
+    border-top: 1px solid #fff;
+    width: 90vw;
+    height: 7px;
+    margin-left: 5vw;
+}
+
 .main-navigation-mobile-list.displayMobileNav{
     right: 0;
+    opacity: 1;
+    transition: opacity 1ms linear, right 450ms ease-in-out;
 }
 
 .hide-on-desktop{
@@ -272,7 +281,8 @@ img.displaySlide{
     text-align: center;
 }
 
-.motto-block p{
+.motto-block p1{
+    display: block;
     padding: 1vw 0;
     transition: .3s ease-in-out;
 }
@@ -281,20 +291,17 @@ img.displaySlide{
     display:block;
     width: fit-content;
     margin: 0 auto;
-    
 }
 
-.motto-block a p:hover{
+.motto-block a p1:hover{
     transform: scale(1.25);
     color:white;
 }
 
-.divider{
+.motto-divider{
     display: inline-block;
-    border-top-style: solid;
-    border-top-width: 1px;
-    border-top-color: #ffffff;
-    width: 22%;
+    border-top: 1px solid #fff;
+    width: 20%;
     height: 7px;
 }
 
@@ -419,10 +426,6 @@ img.displaySlide{
     display: inline-block;
 }
 
-.contact-form{
-    width: calc(30vw + 15rem);
-}
-
 .contact-form h4{
     margin-top: 4rem;
     margin-bottom: 1.5rem;
@@ -444,7 +447,7 @@ img.displaySlide{
 }
 
 .contact-form textarea{
-    width:100%;
+    width: 100%;
     outline: none;
     padding: 1rem;
     font-family: "Montserrat", sans-serif;
@@ -497,9 +500,8 @@ special-footer{
     color: var(--main-orange);
 }
 
-.footer-part p1{
+.footer-part p{
     display: inline-block;
-    margin-left: 0.35rem;
     margin-top: 0.75rem;
 }
 
@@ -532,7 +534,7 @@ special-footer{
 
     p1,
     i{
-        font-size: calc(1.20vw + 0.60rem);
+        font-size: calc(1.10vw + 0.55rem);
     }
     
     
@@ -569,9 +571,12 @@ special-footer{
         padding-left: 5vw;
     }
 
-    .main-navigation-list-option i,
-    .main-navigation-list-option span{
-        font-size: calc(4vw + 2rem);
+    .main-navigation-list-option p1{
+        font-size: calc(3vw + 1.5rem);
+    }
+
+    .main-navigation-list-option i{
+        font-size: calc(5vw + 2.5rem);
     }
 
     .logo
@@ -601,16 +606,16 @@ special-footer{
 
     /*-----MOTTO----*/
 
-    /* .motto-block{
-        height: calc(18vw + 9rem);
-    } */
-
-    .motto-block p{
-        padding: calc(1.8vw + 0.9rem) 0;
+    .motto-block h4{
+        margin-bottom: 1rem;
     }
 
     .motto-block a:hover{
         font-size: calc(1.1vw + 0.55rem);
+    }
+
+    .motto-divider{
+        width: 35%;
     }
 
     /*-----CONTENT-BOXES----*/
@@ -635,5 +640,10 @@ special-footer{
     .footer-part{
         /* flex: 1 1 0px; */
         flex: auto;
+        padding-bottom: 1rem;
+    }
+
+    .footer-part:last-of-type{
+        border-left: 1px solid #ffffff;
     }
 }
