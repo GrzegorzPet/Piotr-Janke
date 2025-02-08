@@ -130,29 +130,34 @@ special-header{
 }
 
 .title{
-    width:42%;
+    width:44%;
     color: var(--main-orange);
 }
 
 .logo{
-    width: 16%;
+    width: 12%;
 }
 
 .logo-container img{
     width: 100%;
-    padding: 1.25vw
+    padding: 0.5vw
 }
 
 .top-navigation{
-    width: 42%;
+    width: 44%;
     overflow: hidden;
 }
 
 .main-navigation-list{
     display: flex;
     align-items: flex-end;
-    gap: calc(1.5vw + 0.75rem);
+    gap: calc(0.8vw + 0.4rem);
     white-space: nowrap;
+}
+
+.main-navigation-list-divider{
+    height: calc(1vw + 0.5rem);
+    border-right: 1px solid #fff;
 }
 
 .main-navigation-mobile-list{
@@ -173,17 +178,17 @@ special-header{
     backdrop-filter: blur(10px);
 }
 
+.main-navigation-mobile-list.displayMobileNav{
+    right: 0;
+    opacity: 1;
+    transition: opacity 1ms linear, right 450ms ease-in-out;
+}
+
 .main-navigation-mobile-list-divider{
     border-top: 1px solid #fff;
     width: 90vw;
     height: 7px;
     margin-left: 5vw;
-}
-
-.main-navigation-mobile-list.displayMobileNav{
-    right: 0;
-    opacity: 1;
-    transition: opacity 1ms linear, right 450ms ease-in-out;
 }
 
 .hide-on-desktop{
@@ -513,6 +518,8 @@ special-footer{
     color: var(--instagram-color);
 }
 
+/*---'---\|/---'---MOBILE---'---\|/---'---*/
+
 @media (orientation: portrait) {
     
     :root{
@@ -520,11 +527,11 @@ special-footer{
     }
 
     h2{
-        font-size: calc(3vw + 1.5rem);
+        font-size: calc(2.4vw + 1.2rem);
     }
     
     h3{
-        font-size: calc(2vw + 1rem);
+        font-size: calc(1.8vw + 0.9rem);
     }
 
     h4,
@@ -534,7 +541,7 @@ special-footer{
 
     p1,
     i{
-        font-size: calc(1.10vw + 0.55rem);
+        font-size: calc(1.1vw + 0.55rem);
     }
     
     
@@ -572,20 +579,20 @@ special-footer{
     }
 
     .main-navigation-list-option p1{
-        font-size: calc(3vw + 1.5rem);
+        font-size: calc(2vw + 1rem);
     }
 
     .main-navigation-list-option i{
-        font-size: calc(5vw + 2.5rem);
+        font-size: calc(4vw + 2rem);
     }
 
     .logo
     {
-        width: 50%;
+        width: 35%;
     }
 
     .logo-container img{
-        padding: 4vw;
+        padding: 2vw;
     }
 
     /*-----CONTENT----*/

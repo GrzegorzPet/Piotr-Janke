@@ -23,16 +23,19 @@ class SpecialHeader extends HTMLElement {
                                     <p1>Über uns</p1>
                                 </a>
                             </li>
+                            <li class="main-navigation-list-divider hide-on-mobile"></li>
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./realisierungen.html">
                                     <p1>Realisierungen</p1>
                                 </a>
                             </li>
+                            <li class="main-navigation-list-divider hide-on-mobile"></li>
                             <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./angebot.html">
+                                <a href="./dienstleistungen.html">
                                     <p1>Dienstleistungen</p1>
                                 </a>
                             </li>
+                            <li class="main-navigation-list-divider hide-on-mobile"></li>
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./kontakt.html">
                                     <p1>Kontakt</p1>
@@ -61,8 +64,8 @@ class SpecialHeader extends HTMLElement {
                                 </li>
                                 <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
-                                    <a href="./angebot.html">
-                                        <p1>Angebot</p1>
+                                    <a href="./dienstleistungen.html">
+                                        <p1>Dienstleistungen</p1>
                                     </a>
                                 </li>
                                 <li class=main-navigation-mobile-list-divider></li>
@@ -79,7 +82,7 @@ class SpecialHeader extends HTMLElement {
             </div>
             <div class="second-bar">
                 <div class="center">
-                    <h4>Montage und Renovierung</h4>
+                    <p1>Montage und Renovierung</p1>
                 </div>
             </div>
         </div>
