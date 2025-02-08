@@ -207,6 +207,16 @@ special-header{
 
 /*-----SLIDER-----*/
 
+.slider-shadow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 4px;
+    left: 0;
+    box-shadow: inset 0px -10rem 5rem -2rem rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .slider-wrapper{
     position: relative;
     width: 100%;
@@ -223,29 +233,27 @@ special-header{
     text-shadow: 5px 5px 15px rgb(0, 0, 0, 1);
 }
 
-.slider-shadow{
-    position: absolute;
-    width: 100%;
+.carousel{
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.slider{
+    display: flex;
     height: 100%;
-    bottom: 0;
-    left: 0;
-    box-shadow: inset 0px -10rem 5rem -2rem rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    width: 300%;
+    transition: all 0.5s;
+    flex-shrink: 0;
 }
 
 .slider img{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    inset: 1;
-    opacity: 0;
+    flex-basis: 20%;
+    flex-shrink: 0;
+    flex: 1;
+    width: calc(100% / 3);
     aspect-ratio: 5/1;
     object-fit: cover;
-    transition: opacity 200ms ease-in-out;
-}
-
-img.displaySlide{
-    opacity: 1;
 }
 
 .slider-wrapper button{
@@ -261,8 +269,7 @@ img.displaySlide{
     z-index: 5;
 }
 
-.slider-wrapper button:hover,
-.slider-wrapper button:focus{
+.slider-wrapper button:hover{
     color: white;
 }
 
@@ -600,11 +607,7 @@ special-footer{
     /*-----SLIDER-----*/
 
     .slider-wrapper{
-        height: calc(100vw*2/3);
-    }
-
-    .slider-wrapper span{
-        left: 5%;
+        height: calc(100%*2/3);
     }
 
     .slider img{
