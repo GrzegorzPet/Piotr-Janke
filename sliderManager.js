@@ -7,8 +7,8 @@ let intervalId = null;
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider(){
-    intervalId = setInterval(nextSlide, 5000);
     slider.dataset.prevPercentage = (-100/3);
+    intervalId = setInterval(nextSlide, 5000);
 }
 
 function prevSlide(){
@@ -16,14 +16,13 @@ function prevSlide(){
     slider.animate({
         transform: `translateX(${slider.dataset.prevPercentage}%)`
     }, { duration: 250, fill: "forwards" });
-
     setTimeout(function(){
-        slider.prepend(slider.lastElementChild);
+        slider.dataset.prevPercentage = (-100/3);
         slider.animate({
-            transform: `translateX(${(-100/3)}%)`
+            transform: `translateX(${slider.dataset.prevPercentage}%)`
         }, { duration: 0, fill: "forwards" });
+        slider.prepend(slider.lastElementChild);
     },250)
-    slider.dataset.prevPercentage = (-100/3);
 }
 
 function nextSlide(){
@@ -32,12 +31,12 @@ function nextSlide(){
         transform: `translateX(${slider.dataset.prevPercentage}%)`
     }, { duration: 250, fill: "forwards" });
     setTimeout(function(){
-        slider.appendChild(slider.firstElementChild);
+        slider.dataset.prevPercentage = (-100/3);
         slider.animate({
-            transform: `translateX(${(-100/3)}%)`
+            transform: `translateX(${slider.dataset.prevPercentage}%)`
         }, { duration: 0, fill: "forwards" });
+        slider.appendChild(slider.firstElementChild);
     },250)
-    slider.dataset.prevPercentage = (-100/3);
 }
 
 const handleOnDown = (e) => 
