@@ -217,6 +217,12 @@ special-header{
     z-index: 1;
 }
 
+#slider-link{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .slider-wrapper{
     position: relative;
     width: 100%;
@@ -241,19 +247,32 @@ special-header{
 
 .slider{
     display: flex;
+    overflow: hidden;
+    user-select: none;
+    flex-wrap: nowrap;
     height: 100%;
     width: 300%;
-    transition: all 0.5s;
+    transform: translateX(calc(100%/-3));
     flex-shrink: 0;
 }
 
-.slider img{
+.slider:active {
+    cursor: grabbing;
+}
+
+.slide{
     flex-basis: 20%;
     flex-shrink: 0;
     flex: 1;
-    width: calc(100% / 3);
     aspect-ratio: 5/1;
-    object-fit: cover;
+    width: calc(100% / 3);
+}
+
+.slide img{
+    position:relative;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
 }
 
 .slider-wrapper button{
@@ -610,7 +629,7 @@ special-footer{
         height: calc(100%*2/3);
     }
 
-    .slider img{
+    .slide{
         aspect-ratio: 3/2;
     }
 
