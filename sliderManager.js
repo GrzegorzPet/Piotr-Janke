@@ -22,6 +22,8 @@ function prevSlide(){
         }, { duration: 0, fill: "forwards" });
         slider.prepend(slider.lastElementChild);
     },250)
+    clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 5000);
 }
 
 function nextSlide(){
@@ -36,10 +38,15 @@ function nextSlide(){
         }, { duration: 0, fill: "forwards" });
         slider.appendChild(slider.firstElementChild);
     },250)
+    clearInterval(intervalId);
+    intervalId = setInterval(nextSlide, 5000);
 }
 
 const handleOnDown = (e) => 
+{
+    clearInterval(intervalId);
     slider.dataset.mouseDownAt = e.clientX;
+}
 
 const handleOnUp = () => {
     slider.dataset.mouseDownAt = "0";
@@ -65,7 +72,6 @@ const maxDelta = window.innerWidth;
 
 const handleOnMove = (e) => {
     if (slider.dataset.mouseDownAt === "0" || isNaN(slider.dataset.mouseDownAt)) return;
-    console.log("lul-2");
     link.style.display= 'none';
     clearInterval(intervalId);
     const mouseDelta = parseFloat(slider.dataset.mouseDownAt) - e.clientX;
