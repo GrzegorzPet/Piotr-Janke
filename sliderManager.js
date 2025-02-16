@@ -1,7 +1,6 @@
 const slider = document.querySelector(".slider");
 const wrapper = document.querySelector(".slider-wrapper"); 
 const link = document.getElementById('slider-link');
-var direction = -1;
 let intervalId = null;
 
 document.addEventListener("DOMContentLoaded", initializeSlider);
@@ -65,8 +64,8 @@ const handleOnUp = () => {
 const maxDelta = window.innerWidth;
 
 const handleOnMove = (e) => {
-    if (slider.dataset.mouseDownAt === "0") return;
-
+    if (slider.dataset.mouseDownAt === "0" || isNaN(slider.dataset.mouseDownAt)) return;
+    console.log("lul-2");
     link.style.display= 'none';
     clearInterval(intervalId);
     const mouseDelta = parseFloat(slider.dataset.mouseDownAt) - e.clientX;
