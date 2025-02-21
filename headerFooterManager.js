@@ -70,6 +70,12 @@ class SpecialHeader extends HTMLElement {
                                 </li>
                                 <li class=main-navigation-mobile-list-divider></li>
                                 <li class="main-navigation-list-option">
+                                    <a href="./meinungen.html">
+                                        <p1>Meinungen</p1>
+                                    </a>
+                                </li>
+                                <li class=main-navigation-mobile-list-divider></li>
+                                <li class="main-navigation-list-option">
                                     <a href="./kontakt.html">
                                         <p1>Kontakt</p1>
                                     </a>

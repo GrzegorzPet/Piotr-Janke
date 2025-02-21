@@ -28,6 +28,7 @@ function prevSlide(){
 
 function nextSlide(){
     slider.dataset.prevPercentage = parseFloat(slider.dataset.prevPercentage) + (-100/3);
+    console.log("lol");
     slider.animate({
         transform: `translateX(${slider.dataset.prevPercentage}%)`
     }, { duration: 250, fill: "forwards" });
