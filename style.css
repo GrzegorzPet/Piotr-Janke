@@ -394,6 +394,15 @@ special-header{
     padding: 3rem calc(3vw + 1.5rem);
     border-top: var(--main-orange) solid 0.5rem; 
     color: var(--content-gray-text);
+
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.content-block-visible{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .content-block p{
