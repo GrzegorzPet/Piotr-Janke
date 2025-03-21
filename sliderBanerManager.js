@@ -1,44 +1,46 @@
 const slider = document.querySelector(".slider");
 const wrapper = document.querySelector(".slider-wrapper"); 
-const link = document.getElementById('slider-link');
+const link = document.getElementById('slider-link'); 
+const slidesCount = document.querySelectorAll(".slide").length;
 let intervalId = null;
 
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider(){
-    slider.dataset.prevPercentage = (-100/3);
+    slider.style.width = `${slidesCount * 100}%`;
+    slider.dataset.prevPercentage = (-100/slidesCount);
+    slider.style.transform = `translateX(${slider.dataset.prevPercentage}%)`
     intervalId = setInterval(nextSlide, 5000);
 }
 
 function prevSlide(){
-    slider.dataset.prevPercentage = parseFloat(slider.dataset.prevPercentage) + (100/3);
+    slider.dataset.prevPercentage = parseFloat(slider.dataset.prevPercentage) + (100/slidesCount);
     slider.animate({
         transform: `translateX(${slider.dataset.prevPercentage}%)`
-    }, { duration: 250, fill: "forwards" });
+    }, { duration: 300, fill: "forwards" });
     setTimeout(function(){
-        slider.dataset.prevPercentage = (-100/3);
+        slider.dataset.prevPercentage = (-100/slidesCount);
         slider.animate({
             transform: `translateX(${slider.dataset.prevPercentage}%)`
-        }, { duration: 0, fill: "forwards" });
+        }, { duration: 0, fill: "forwards"});
         slider.prepend(slider.lastElementChild);
-    },250)
+    },300);
     clearInterval(intervalId);
     intervalId = setInterval(nextSlide, 5000);
 }
 
 function nextSlide(){
-    slider.dataset.prevPercentage = parseFloat(slider.dataset.prevPercentage) + (-100/3);
-    console.log("lol");
+    slider.dataset.prevPercentage = parseFloat(slider.dataset.prevPercentage) + (-100/slidesCount);
     slider.animate({
         transform: `translateX(${slider.dataset.prevPercentage}%)`
-    }, { duration: 250, fill: "forwards" });
+    }, { duration: 300, fill: "forwards" });
     setTimeout(function(){
-        slider.dataset.prevPercentage = (-100/3);
+        slider.dataset.prevPercentage = (-100/slidesCount);
         slider.animate({
             transform: `translateX(${slider.dataset.prevPercentage}%)`
         }, { duration: 0, fill: "forwards" });
         slider.appendChild(slider.firstElementChild);
-    },250)
+    },325);
     clearInterval(intervalId);
     intervalId = setInterval(nextSlide, 5000);
 }
@@ -62,7 +64,7 @@ const handleOnUp = () => {
         slider.animate({
             transform: `translateX(${slider.dataset.prevPercentage}%)`
         }, { duration: 100, fill: "forwards" });
-        slider.dataset.prevPercentage = (-100/3);
+        slider.dataset.prevPercentage = (-100/slidesCount);
     }
     setTimeout(function(){
         link.style.display= 'block';
@@ -78,7 +80,7 @@ const handleOnMove = (e) => {
     const mouseDelta = parseFloat(slider.dataset.mouseDownAt) - e.clientX;
     const percentage = (mouseDelta / maxDelta) * -100;
 
-    const nextPercentage = parseFloat(slider.dataset.prevPercentage) + (percentage/3);
+    const nextPercentage = parseFloat(slider.dataset.prevPercentage) + (percentage/slidesCount);
     slider.dataset.percentage = percentage;
     
     slider.animate({

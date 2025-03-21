@@ -9,7 +9,7 @@ class SpecialHeader extends HTMLElement {
                     </div>
                 </div>
                 <div class="logo">
-                    <div class="logo-container  center">
+                    <div class="logo-container center">
                         <a href="./index.html">
                             <img src="img/logo.svg" alt="logo">
                         </a>
@@ -20,22 +20,17 @@ class SpecialHeader extends HTMLElement {
                         <ul class="main-navigation-list center">
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./uber-uns.html">
-                                    <p1>Über uns</p1>
+                                    <div class="dropdown-list">
+                                        <p1>Über uns</p1>
+                                        <p class="triangle-down"></p>
+                                    </div>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-divider hide-on-mobile"></li>
-                            <li class="main-navigation-list-option hide-on-mobile">
-                                <a href="./realisierungen.html">
-                                    <p1>Realisierungen</p1>
-                                </a>
-                            </li>
-                            <li class="main-navigation-list-divider hide-on-mobile"></li>
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./dienstleistungen.html">
                                     <p1>Dienstleistungen</p1>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-divider hide-on-mobile"></li>
                             <li class="main-navigation-list-option hide-on-mobile">
                                 <a href="./kontakt.html">
                                     <p1>Kontakt</p1>
@@ -88,7 +83,7 @@ class SpecialHeader extends HTMLElement {
             </div>
             <div class="second-bar">
                 <div class="center">
-                    <p1>Montage und Renovierung</p1>
+                    <h1>Montage und Renovierung</h1>
                 </div>
             </div>
         </div>
