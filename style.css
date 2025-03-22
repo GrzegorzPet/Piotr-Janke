@@ -294,7 +294,7 @@ special-header{
     flex-basis: 20%;
     flex-shrink: 0;
     flex: 1;
-    height: calc(100vh - 8rem);
+    height: calc(100dvh - 8rem);
 }
 
 .slide img{

@@ -1,6 +1,6 @@
 const slider = document.querySelector(".content-slider");
 const slides = document.querySelectorAll(".content-slide");
-const dots = document.querySelectorAll(".content-carousel-dot");
+let dots;
 const slidesQuantity = document.querySelectorAll(".content-slide").length;
 let slideCounter = 0;
 let intervalId = null;
@@ -8,6 +8,11 @@ let intervalId = null;
 document.addEventListener("DOMContentLoaded", initializeSlider);
 
 function initializeSlider(){
+    const dotList = document.querySelector(".content-carousel-dot-list");
+    for(let i = 0; i < slidesQuantity; i++){
+        dotList.innerHTML+=`<ul class="content-carousel-dot" onclick="changeSlide(${i})"></ul>`
+    }
+    dots = document.querySelectorAll(".content-carousel-dot");
     dots[slideCounter].style.opacity = 1;
     slideHeight = document.querySelector(".content-slide-image").offsetHeight;
     intervalId = setInterval(nextSlide, 5000);
