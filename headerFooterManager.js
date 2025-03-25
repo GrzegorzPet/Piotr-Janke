@@ -106,9 +106,10 @@ function hideSidebar(){
 class SpecialFooter extends HTMLElement {
     connectedCallback() { 
         this.innerHTML =`
-        <div class="footer-part hide-on-mobile">
+        <div class="footer-part">
             <h2 class="center">
-                <a href="./index.html">Piotr Janke</a>
+                <a class="hide-on-mobile" href="./index.html">Piotr Janke</a>
+                <a class="hide-on-desktop" href="./index.html">Kontakt</a>
             </h2>
         </div>
         <div class="footer-part">
