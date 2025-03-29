@@ -18,20 +18,29 @@ class SpecialHeader extends HTMLElement {
                 <div class="top-navigation fixed-on-mobile">
                     <nav class="main-navigation">
                         <ul class="main-navigation-list center">
-                            <li class="main-navigation-list-option hide-on-mobile">
+                            <li class="main-navigation-option main-navigation-dropdown-option hide-on-mobile">
                                 <a href="./uber-uns.html">
-                                    <div class="dropdown-list">
-                                        <p1>Über uns</p1>
-                                        <p class="triangle-down"></p>
-                                    </div>
+                                    <p1>Über uns</p1>
+                                    <p class="triangle-down"></p>
                                 </a>
+                                <div class="main-navigation-dropdown-block">
+                                    <a href="./dienstleistungen.html">
+                                        <p1>Über uns</p1>
+                                    </a>
+                                    <a href="./realisierungen.html">
+                                        <p1>Realisierungen</p1>
+                                    </a>
+                                    <a href="./meinungen.html">
+                                        <p1>Meinungen</p1>
+                                    </a>
+                                </div>
                             </li>
-                            <li class="main-navigation-list-option hide-on-mobile">
+                            <li class="main-navigation-option hide-on-mobile">
                                 <a href="./dienstleistungen.html">
                                     <p1>Dienstleistungen</p1>
                                 </a>
                             </li>
-                            <li class="main-navigation-list-option hide-on-mobile">
+                            <li class="main-navigation-option hide-on-mobile">
                                 <a href="./kontakt.html">
                                     <p1>Kontakt</p1>
                                 </a>
@@ -42,40 +51,40 @@ class SpecialHeader extends HTMLElement {
                         </ul>
                         <div class="hide-on-desktop">
                             <ul class="main-navigation-mobile-list center">
-                                <li onclick = hideSidebar() class="main-navigation-list-option">
+                                <li onclick = hideSidebar() class="main-navigation-option">
                                     <span><i class="fa-solid fa-x"></i></span>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
+                                <li class=main-navigation-mobile-divider></li>
                                 <li class="main-navigation-list-option">
                                     <a href="./uber-uns.html">
                                         <p1>Über uns</p1>
                                     </a>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
-                                <li class="main-navigation-list-option">
+                                <li class=main-navigation-mobile-divider></li>
+                                <li class="main-navigation-option">
                                     <a href="./realisierungen.html">
                                         <p1>Realisierungen</p1>
                                     </a>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
-                                <li class="main-navigation-list-option">
+                                <li class=main-navigation-mobile-divider></li>
+                                <li class="main-navigation-option">
                                     <a href="./dienstleistungen.html">
                                         <p1>Dienstleistungen</p1>
                                     </a>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
-                                <li class="main-navigation-list-option">
+                                <li class=main-navigation-mobile-divider></li>
+                                <li class="main-navigation-option">
                                     <a href="./meinungen.html">
                                         <p1>Meinungen</p1>
                                     </a>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
-                                <li class="main-navigation-list-option">
+                                <li class=main-navigation-mobile-divider></li>
+                                <li class="main-navigation-option">
                                     <a href="./kontakt.html">
                                         <p1>Kontakt</p1>
                                     </a>
                                 </li>
-                                <li class=main-navigation-mobile-list-divider></li>
+                                <li class=main-navigation-mobile-divider></li>
                             </ul>
                         </div>
                     </nav>

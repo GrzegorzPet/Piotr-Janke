@@ -1,9 +1,9 @@
-const content = document.querySelectorAll(".content-block");
+const content = document.querySelectorAll(".motto-block, .content-block, .content-categories");
 
 document.addEventListener("DOMContentLoaded", function () {
     content.forEach((block) => {
         if(isInView(block)) {
-            block.classList.add("content-block-visible");
+            block.classList.add("visible");
         }
     });
 });
@@ -11,7 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("scroll", function () {
     content.forEach((block) => {
         if(isInView(block)) {
-            block.classList.add("content-block-visible");
+            block.classList.add("visible");
+        }
+        if(isntInView(block)) {
+            block.classList.remove("visible");
         }
     });
 });
@@ -20,6 +23,14 @@ function isInView(element){
     const rect = element.getBoundingClientRect();
     return(
         rect.bottom > 0 &&
-        rect.top < (window.innerHeight - 150 || document.documentElement.clientHeight - 150)
+        rect.top < (window.innerHeight || document.documentElement.clientHeight)
+    );
+}
+
+function isntInView(element){
+    const rect = element.getBoundingClientRect();
+    return(
+        rect.bottom < 0 ||
+        rect.top > (window.innerHeight || document.documentElement.clientHeight)
     );
 }
